@@ -1,1 +1,1 @@
-Sammya saranam ayyapa 
+Sammya saranam ayyapa .
