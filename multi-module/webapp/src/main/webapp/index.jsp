@@ -1,3 +1,1 @@
-Sammya saranam ayyapa .  ramesh
-
-
+This is sample Maven project
