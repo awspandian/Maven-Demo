@@ -1,0 +1,17 @@
+pipeline {
+agent any
+stages {
+stage ('SCM'){
+steps {git 'https://github.com/awspandian/Maven-Demo.git' }
+}
+stage ('BUILD'){
+steps { 
+		bat 'mvn clean'
+		bat 'mvn install'
+}
+}
+stage ('Deploy'){
+steps {bat label: '', script: 'xcopy /y "C:\\Windows\\System32\\config\\systemprofile\\.jenkins\\workspace\\hippo-pipeline\\multi-module\\webapp\\target\\webapp.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps"' }
+}
+}
+}
